@@ -3,6 +3,8 @@ body {
   color: grey;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /*Header*/
@@ -35,11 +37,13 @@ header a:hover {
 
 /*Content*/
 main {
+  display: flex;
   padding: 15px;
 }
 
 .main-content {
   float: left;
+  position: relative;
   width: 70%;
 }
 
@@ -68,5 +72,13 @@ main {
 /*Sidebar*/
 aside {
   float: left;
+  position: relative;
+  right: 0;
+  transition: all .25s;
   width: 30%;
+}
+
+aside.collapsed {
+  right: -500px;
+  margin-right: -500px;
 }
